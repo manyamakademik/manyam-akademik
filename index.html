@@ -1,459 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>Manyam Akademik | Commerce & CA Foundation Coaching</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manyam Akademik - Commerce (11th & 12th) and CA Foundation coaching classes in Sector 89, Gurugram." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Manyam Akademik - Commerce (11th & 12th) and CA Foundation coaching classes in Sector 89, Gurugram. Founder: Mohit Singh (DOB: 26-12-1991) - Capricorn, Life Path 4." />
   <meta property="og:title" content="Manyam Akademik | Commerce & CA Foundation Coaching" />
   <meta property="og:description" content="Manyam Akademik helps students build a strong commerce foundation — Accounts, Business Studies, Economics & CA Foundation guidance. Book a free demo." />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_IN" />
+  <meta property="og:image" content="logo.png" />
   <meta name="google-site-verification" content="HVepjJ_6ZdlyGydYwyebBSykXQSzCS6W1-_iAbVE8XQ" />
+
   <style>
-    :root {
-      --primary: #1b5e20;
-      --primary-light: #4caf50;
-      --accent: #ffc107;
-      --bg: #f5f5f5;
-      --text: #222;
-      --muted: #666;
-      --white: #ffffff;
-      --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      --radius-lg: 18px;
+    /* ---- Astrology-inspired color palette (Capricorn-focused: grounded + trustworthy) ---- */
+    :root{
+      --primary: #0b3d91;          /* deep blue (trust, authority) */
+      --primary-light: #1852b3;
+      --accent: #1b8a6b;           /* emerald/teal accent (growth, prosperity) */
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #616b75;
+      --shadow: 0 10px 24px rgba(12,20,40,0.06);
+      --radius-lg: 16px;
       --radius-pill: 999px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;border-radius:6px;}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+    header{
+      position:sticky;top:0;z-index:60;
+      background:rgba(255,255,255,0.98);backdrop-filter:blur(6px);
+      box-shadow:0 1px 6px rgba(12,20,40,0.04);
     }
+    .nav{max-width:1100px;margin:0 auto;padding:0.8rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .brand{display:flex;align-items:center;gap:0.65rem;}
+    .brand-logo-img{width:44px;height:44px;border-radius:10px;object-fit:cover;box-shadow:var(--shadow);}
+    .brand-text-title{font-weight:800;font-size:1.05rem;color:var(--primary);}
+    .brand-text-sub{font-size:0.78rem;color:var(--muted);}
+    .nav-links{display:flex;gap:0.85rem;font-size:0.92rem;}
+    .nav-links a{padding:0.35rem 0.7rem;border-radius:999px;color:var(--muted);}
+    .nav-links a:hover{background:#eef4ff;color:var(--primary);}
+    .nav-cta{display:flex;gap:0.5rem;align-items:center;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;border-radius:var(--radius-pill);padding:0.45rem 1rem;font-weight:700;cursor:pointer;border:0;}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow:var(--shadow);}
+    .btn-outline{background:#fff;border:1px solid #dbe7ff;color:var(--primary);}
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    main{max-width:1100px;margin:0 auto;padding:1.2rem 1rem 3rem;}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:1.6rem;align-items:center;margin-top:1.2rem;}
+    .badge{display:inline-flex;align-items:center;gap:0.45rem;padding:0.28rem 0.6rem;border-radius:999px;background:#ecf6f4;color:var(--accent);font-weight:700;font-size:0.82rem;margin-bottom:0.8rem;}
+    .hero-title{font-size:1.9rem;font-weight:900;line-height:1.05;margin-bottom:0.5rem;}
+    .hero-title .highlight{color:var(--accent);}
+    .hero-sub{color:var(--muted);margin-bottom:0.9rem;font-size:0.96rem;}
+    .hero-points{display:grid;grid-template-columns:repeat(2,1fr);gap:0.45rem 1rem;font-size:0.9rem;margin-bottom:1rem;}
+    .hero-points span::before{content:"✔";margin-right:0.45rem;color:var(--accent);}
+    .hero-actions{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:0.8rem;}
+    .hero-card{background:var(--card);border-radius:var(--radius-lg);padding:1rem;box-shadow:var(--shadow);}
+
+    /* Astro Card styles */
+    .astro-card{background:linear-gradient(180deg, rgba(11,61,145,0.04), rgba(27,138,107,0.02));border-radius:14px;padding:0.9rem;border:1px solid rgba(11,61,145,0.06);}
+    .astro-title{font-weight:800;color:var(--primary);font-size:1rem;margin-bottom:0.35rem;}
+    .astro-sub{color:var(--muted);font-size:0.86rem;margin-bottom:0.6rem;}
+    .astro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;}
+
+    section{margin-top:2rem;}
+    .section-title{font-size:1.2rem;font-weight:800;margin-bottom:0.45rem;}
+    .section-subtitle{color:var(--muted);margin-bottom:0.9rem;}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .card{background:var(--card);padding:0.9rem;border-radius:12px;box-shadow:var(--shadow);font-size:0.9rem;}
+    .card-title{font-weight:700;margin-bottom:0.45rem;color:var(--primary);}
+
+    .contact-wrapper{display:grid;grid-template-columns:1fr 420px;gap:1rem;}
+    form{display:grid;gap:0.6rem;font-size:0.9rem;}
+    label{font-weight:600;font-size:0.85rem;}
+    input,textarea{width:100%;padding:0.5rem;border-radius:10px;border:1px solid #e6eefb;outline:none;font-size:0.92rem;}
+    input:focus,textarea:focus{box-shadow:0 6px 18px rgba(27,138,107,0.06);border-color:var(--accent);}
+    .contact-card{background:var(--card);padding:0.9rem;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;}
+
+    footer{padding:1rem;text-align:center;color:var(--muted);border-top:1px solid #eef2ff;margin-top:2rem;background:transparent;}
+    .highlight{color:var(--primary);font-weight:800;}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .contact-wrapper{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:repeat(2,1fr);}
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.7rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .brand-logo-img {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: var(--shadow);
-    }
-
-    .brand-text-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .brand-text-sub {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
-      padding: 0.35rem 0.75rem;
-      border-radius: var(--radius-pill);
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      background: #e8f5e9;
-      color: var(--primary);
-    }
-
-    .nav-cta {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      font-size: 0.85rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-      border-radius: var(--radius-pill);
-      border: none;
-      cursor: pointer;
-      padding: 0.45rem 1.1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary:hover {
-      background: #144018;
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      border: 1px solid #c8e6c9;
-      background: var(--white);
-      color: var(--primary);
-    }
-
-    .btn-outline:hover {
-      background: #e8f5e9;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.2rem 1rem 2.5rem;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2rem;
-      margin-top: 1.2rem;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-pill);
-      background: #e8f5e9;
-      color: var(--primary);
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-bottom: 0.7rem;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-title span.highlight {
-      color: var(--primary);
-    }
-
-    .hero-subtitle {
-      font-size: 0.96rem;
-      color: var(--muted);
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.4rem 1.25rem;
-      font-size: 0.88rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-points span::before {
-      content: "✔";
-      margin-right: 0.25rem;
-      color: var(--primary);
-      font-size: 0.85rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      align-items: center;
-      margin-bottom: 0.9rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 1.1rem 1rem;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card-title {
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-      font-size: 0.95rem;
-    }
-
-    .hero-card-list {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-card-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    .hero-batch-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: var(--radius-pill);
-      font-size: 0.75rem;
-      background: #fffde7;
-      color: #8d6e00;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-fee {
-      font-size: 0.9rem;
-    }
-
-    .hero-fee strong {
-      color: var(--primary);
-      font-size: 1.05rem;
-    }
-
-    .hero-small-text {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    section {
-      margin-top: 2.2rem;
-    }
-
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 0.9rem 0.9rem 1rem;
-      box-shadow: var(--shadow);
-      font-size: 0.88rem;
-    }
-
-    .card-title {
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      font-size: 0.95rem;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      padding: 0.18rem 0.5rem;
-      border-radius: var(--radius-pill);
-      background: #e3f2fd;
-      color: #0d47a1;
-      margin-bottom: 0.3rem;
-    }
-
-    .card ul {
-      padding-left: 1.1rem;
-    }
-
-    .card ul li {
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
-      gap: 1rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.6rem;
-      font-size: 0.85rem;
-    }
-
-    label {
-      font-weight: 500;
-      font-size: 0.8rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.4rem 0.5rem;
-      border-radius: 9px;
-      border: 1px solid #ddd;
-      font-size: 0.86rem;
-      outline: none;
-    }
-
-    input:focus, textarea:focus {
-      border-color: var(--primary-light);
-      box-shadow: 0 0 0 2px #c8e6c9;
-    }
-
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
-
-    .contact-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 0.9rem 0.9rem 1rem;
-      box-shadow: var(--shadow);
-      font-size: 0.86rem;
-    }
-
-    .contact-line {
-      margin-bottom: 0.35rem;
-    }
-
-    .contact-label {
-      font-weight: 600;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .contact-value {
-      font-size: 0.9rem;
-    }
-
-    .map-placeholder {
-      margin-top: 0.6rem;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      height: 180px;
-      background: #e0e0e0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #555;
-    }
-
-    footer {
-      margin-top: 2rem;
-      padding: 1rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid #ddd;
-      background: #fafafa;
-    }
-
-    footer span.highlight {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .grid-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .contact-wrapper {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 650px) {
-      .nav-links {
-        display: none;
-      }
-      .hero-title {
-        font-size: 1.6rem;
-      }
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-      main {
-        padding-inline: 0.7rem;
-      }
+    @media (max-width:650px){
+      .nav-links{display:none;}
+      .hero-title{font-size:1.35rem;}
+      .grid-3{grid-template-columns:1fr;}
     }
   </style>
 </head>
 <body>
-  <!-- NAVBAR -->
   <header>
     <div class="nav">
       <div class="brand">
-        <!-- replace logo.png with your optimized logo file -->
         <img src="logo.png" alt="Manyam Akademik Logo" class="brand-logo-img" />
         <div>
           <div class="brand-text-title">Manyam Akademik</div>
@@ -464,7 +111,7 @@
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#courses">Courses</a>
-        <a href="#why">Why Us</a>
+        <a href="#astro">Astro</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -480,75 +127,86 @@
     <section class="hero" id="top">
       <div>
         <div class="badge">📍 Sector 89, Gurugram • Offline + Online</div>
-        <h1 class="hero-title">
-          Strong <span class="highlight">Commerce Base</span> for 11th, 12th & CA Foundation
-        </h1>
-        <p class="hero-subtitle">
-          Manyam Akademik helps students understand <b>Commerce concepts practically</b> – Accounts, Business Studies, Economics, etc. – with daily practice, regular tests, and personal guidance so they score high in Boards and build a strong base for CA.
-        </p>
+        <h1 class="hero-title">Build a strong <span class="highlight">Commerce Base</span> — Class 11, 12 & CA Foundation</h1>
+        <p class="hero-sub">Manyam Akademik makes Commerce simple and practical — Accounts, Business Studies, Economics. Daily practice, Personal doubt support, and exam-smart strategy. (Hinglish classes available)</p>
+
         <div class="hero-points">
           <span>All Commerce subjects (Accounts, BST, Eco)</span>
-          <span>Small batch, individual focus</span>
-          <span>Regular written tests & feedback</span>
-          <span>Guidance for CA Foundation</span>
+          <span>Small batches — individual attention</span>
+          <span>Regular tests, PYQs & feedback</span>
+          <span>CA Foundation guidance</span>
         </div>
+
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">📅 Book Free Demo Class</a>
           <a href="https://wa.me/917878029933" class="btn btn-outline" target="_blank">💬 WhatsApp Enquiry</a>
         </div>
-        <div class="hero-note">
-          Coaching by <b>Mohit Singh</b> • Specialised in Commerce  
-          <br />Language: Hindi + English (Hinglish)
+
+        <div style="margin-top:0.6rem;color:var(--muted);font-size:0.92rem;">
+          Coaching by <strong>Mohit Singh</strong> • Language: Hindi + English (Hinglish)
         </div>
       </div>
 
       <aside class="hero-card">
-        <div class="hero-batch-chip">🔥 CA Foundation Batch (May / Sept 2026)</div>
-        <div class="hero-card-title">CA Foundation – Full Course</div>
-        <ul class="hero-card-list">
-          <li>Complete syllabus coverage</li>
-          <li>Concept + Questions + Previous Year Papers</li>
-          <li>Offline + Online class options</li>
-          <li>Personal doubt support</li>
-        </ul>
-        <p class="hero-fee">
-          Course Fee: <strong>₹36,000</strong> (Full Course)  
-        </p>
-        <p class="hero-small-text">
-          Special offer can be discussed during counselling. Limited seats, small batch for personal attention.
-        </p>
+        <div class="astro-card">
+          <div class="astro-title">Astrology & Brand Insight</div>
+          <div class="astro-sub">Founder: <strong>Mohit Singh</strong> • DOB: <strong>26-12-1991</strong></div>
+
+          <div class="astro-grid" style="margin-bottom:0.7rem;">
+            <div>
+              <div style="font-weight:700;color:var(--primary);">Zodiac</div>
+              <div style="color:var(--muted);font-size:0.95rem;">Capricorn ♑</div>
+            </div>
+            <div>
+              <div style="font-weight:700;color:var(--primary);">Life Path</div>
+              <div style="color:var(--muted);font-size:0.95rem;">4 (Stable, Practical)</div>
+            </div>
+          </div>
+
+          <div style="font-size:0.9rem;color:var(--muted);margin-bottom:0.6rem;">
+            Suggested brand tone: <strong>Trustworthy, grounded, growth-oriented</strong>. Colours chosen: Deep blue & emerald accent. These reflect reliability and steady growth — good for parents and students.
+          </div>
+
+          <div style="display:flex;gap:0.5rem;">
+            <div style="flex:1;background:#fff;padding:0.5rem;border-radius:10px;text-align:center;">
+              <div style="font-weight:800;color:var(--primary);font-size:1rem;">Lucky</div>
+              <div style="color:var(--muted);font-size:0.95rem;margin-top:2px;">Number 4</div>
+            </div>
+            <div style="flex:1;background:#fff;padding:0.5rem;border-radius:10px;text-align:center;">
+              <div style="font-weight:800;color:var(--accent);font-size:1rem;">Tagline</div>
+              <div style="color:var(--muted);font-size:0.95rem;margin-top:2px;">"Practical Commerce, Sure Success"</div>
+            </div>
+          </div>
+
+          <div style="margin-top:0.7rem;">
+            <a href="#contact" class="btn btn-outline" style="width:100%;">🎁 Astro Offer: Free 15-min Counselling with Demo</a>
+          </div>
+        </div>
+
+        <div style="margin-top:0.9rem;font-size:0.86rem;color:var(--muted);">
+          <strong>CA Foundation (May / Sept 2026)</strong>
+          <div style="margin-top:6px;">Course Fee: <strong style="color:var(--primary)">₹36,000</strong> — limited seats for personal attention.</div>
+        </div>
       </aside>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
       <h2 class="section-title">About Manyam Akademik</h2>
-      <p class="section-subtitle">
-        Manyam Akademik is a Commerce coaching institute located at <b>Market 89, Sector 89, Gurugram</b>, 
-        focused on building a strong foundation in all subjects of Commerce for Class 11, Class 12 and CA Foundation.
-      </p>
+      <p class="section-subtitle">Manyam Akademik is a Commerce coaching institute at <strong>Market 89, Sector 89, Gurugram</strong>. We focus on concept clarity and exam strategy for Class 11, 12 & CA Foundation.</p>
 
       <div class="grid-3">
         <div class="card">
           <div class="card-title">Our Focus</div>
-          <p>
-            We don't just finish the syllabus – we make you <b>understand concepts</b> in a simple and practical way
-            so that you can apply them in exams as well as in real life.
-          </p>
+          <p>Concepts + Practice + Presentation — we teach how to solve and how to write for board exams and CA Foundation.</p>
         </div>
         <div class="card">
           <div class="card-title">Teaching Style</div>
-          <p>
-            Slow + fast dono type ke students ko dhyaan mein rakh kar pace set kiya jata hai. 
-            Class mein notes, examples, and revision together.
-          </p>
+          <p>Balanced pace for both slow & fast learners with notes, examples and revision cycles.</p>
         </div>
         <div class="card">
-          <div class="card-title">Tests & Practice</div>
-          <p>
-            Chapter-wise tests, sample papers, previous year questions and regular feedback to parents  
-            so that students stay on track.
-          </p>
+          <div class="card-title">Tests & Reports</div>
+          <p>Regular chapter tests, sample papers and parent feedback to track progress.</p>
         </div>
       </div>
     </section>
@@ -556,41 +214,36 @@
     <!-- COURSES -->
     <section id="courses">
       <h2 class="section-title">Courses Offered</h2>
-      <p class="section-subtitle">
-        Choose the right course as per your current class and goal. Demo class is available for all batches.
-      </p>
+      <p class="section-subtitle">Demo available for all batches. Personal doubt support included.</p>
 
-      <div class="grid-3">
+      <div class="grid-3" style="margin-top:0.6rem;">
         <div class="card">
-          <div class="tag">Class 11 – CBSE</div>
+          <div class="tag" style="display:inline-block;background:#eef6ff;padding:0.2rem 0.5rem;border-radius:999px;color:var(--primary);font-weight:700;margin-bottom:0.5rem;">Class 11 – CBSE</div>
           <div class="card-title">Class 11 Commerce (All Subjects)</div>
-          <ul>
+          <ul style="margin-top:6px;color:var(--muted);">
             <li>Accounts, Business Studies, Economics</li>
-            <li>Concept building from basics</li>
-            <li>Regular homework & checking</li>
-            <li>Strong base for Class 12 & CA</li>
+            <li>Concept building & daily practice</li>
+            <li>Homework & personal checks</li>
           </ul>
         </div>
 
         <div class="card">
-          <div class="tag">Class 12 – CBSE</div>
+          <div class="tag" style="display:inline-block;background:#fff7ec;padding:0.2rem 0.5rem;border-radius:999px;color:#b45f00;font-weight:700;margin-bottom:0.5rem;">Class 12 – CBSE</div>
           <div class="card-title">Class 12 Commerce (All Subjects)</div>
-          <ul>
-            <li>Accounts, Business Studies, Economics</li>
-            <li>Board exam pattern & PYQs</li>
-            <li>Exam-oriented tests & revision</li>
-            <li>Special focus on weak chapters</li>
+          <ul style="margin-top:6px;color:var(--muted);">
+            <li>Board pattern & PYQs</li>
+            <li>Exam-oriented tests & revisions</li>
+            <li>Focus on weak chapters</li>
           </ul>
         </div>
 
         <div class="card">
-          <div class="tag">CA Foundation</div>
+          <div class="tag" style="display:inline-block;background:#eefaf4;padding:0.2rem 0.5rem;border-radius:999px;color:var(--accent);font-weight:700;margin-bottom:0.5rem;">CA Foundation</div>
           <div class="card-title">CA Foundation (Commerce Base)</div>
-          <ul>
-            <li>Full syllabus for May/Sept attempts</li>
-            <li>Concept clarity + question practice</li>
-            <li>Strategy for passing in first attempt</li>
-            <li>Doubt support even after class</li>
+          <ul style="margin-top:6px;color:var(--muted);">
+            <li>Complete syllabus coverage</li>
+            <li>Concept clarity + PYQs</li>
+            <li>Strategy to pass in first attempt</li>
           </ul>
         </div>
       </div>
@@ -599,38 +252,22 @@
     <!-- WHY US -->
     <section id="why">
       <h2 class="section-title">Why Choose Manyam Akademik?</h2>
-      <p class="section-subtitle">Parents and students prefer us because of our personal attention and practical teaching.</p>
+      <p class="section-subtitle">Parents prefer us for personal attention, clear concepts and exam-smart practice.</p>
 
-      <div class="grid-2">
+      <div class="grid-3" style="margin-top:0.6rem;">
         <div class="card">
           <div class="card-title">Small Batch Size</div>
-          <p>
-            Limited students in each batch so that every student can ask doubts freely.  
-            Teacher knows each student's level personally.
-          </p>
+          <p>Limited seats so teacher can give time to every student.</p>
         </div>
 
         <div class="card">
-          <div class="card-title">Concept + Exam Approach</div>
-          <p>
-            Har chapter mein pehle concept, phir solved examples, phir board pattern questions.  
-            Students learn <b>how to present answers</b> in exam.
-          </p>
+          <div class="card-title">Practical Teaching</div>
+          <p>Examples from real life + solved board questions for clarity.</p>
         </div>
 
         <div class="card">
-          <div class="card-title">Regular Communication with Parents</div>
-          <p>
-            Test reports and feedback shared with parents so they know the child's progress and 
-            where improvement is needed.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Offline + Online Flexibility</div>
-          <p>
-            Students can attend offline classes in Sector 89, Gurugram or online live classes from home.
-          </p>
+          <div class="card-title">Parent Communication</div>
+          <p>Test reports and suggestions shared regularly.</p>
         </div>
       </div>
     </section>
@@ -638,7 +275,7 @@
     <!-- CONTACT -->
     <section id="contact">
       <h2 class="section-title">Contact & Location</h2>
-      <p class="section-subtitle">Reach out for demo class, batch details, or fee discussion.</p>
+      <p class="section-subtitle">Reach out for demo, batch details or fee discussion.</p>
 
       <div class="contact-wrapper">
         <div>
@@ -647,7 +284,7 @@
             <input id="name" type="text" placeholder="Student / Parent Name" />
 
             <label for="phone">Phone</label>
-            <input id="phone" type="text" placeholder="WhatsApp / Contact Number" />
+            <input id="phone" type="tel" placeholder="WhatsApp / Contact Number" />
 
             <label for="class">Class</label>
             <input id="class" type="text" placeholder="Class 11 / Class 12 / CA Foundation" />
@@ -655,73 +292,53 @@
             <label for="message">Message</label>
             <textarea id="message" placeholder="Write your query (demo, timing, fee etc.)"></textarea>
 
-            <button type="button" class="btn btn-primary" style="margin-top: 0.4rem;" onclick="sendWhatsApp()">
-              💬 Send on WhatsApp
-            </button>
+            <button type="button" class="btn btn-primary" style="margin-top:0.45rem;" onclick="sendWhatsApp()">💬 Send on WhatsApp</button>
           </form>
+
+          <div style="margin-top:0.9rem;font-size:0.92rem;color:var(--muted);">
+            <strong>Note (Astro)</strong>: Branding & colours suggest steady growth and trust — use these on posters, reels and thumbnails for consistent look.
+          </div>
         </div>
 
-        <div class="contact-card" style="padding: 0; overflow: hidden; border-radius: 18px; box-shadow: var(--shadow);">
-          
-          <!-- Title -->
-          <div style="padding: 0.9rem 1rem 0;">
-            <div class="contact-label" style="font-size: 0.85rem; color: var(--muted);">Location Map</div>
-            <div class="contact-value" style="font-size: 1rem; margin-top: 2px;">Manyam Akademik</div>
+        <div class="contact-card" style="padding:0;overflow:hidden;border-radius:14px;box-shadow:var(--shadow);">
+          <div style="padding:0.9rem 1rem 0;">
+            <div class="contact-label" style="font-weight:700;color:var(--muted);font-size:0.88rem;">Location Map</div>
+            <div class="contact-value" style="font-size:0.98rem;margin-top:4px;color:var(--primary);">Manyam Akademik</div>
           </div>
 
           <!-- Exact Google Map iframe (verified listing) -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.741156982815!2d76.934441!3d28.423486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1706968d7df7%3A0x49ab9df0106969e1!2sManyam%20Akademik!5e0!3m2!1sen!2sin!4v1702312345678!5m2!1sen!2sin"
-            width="100%"
-            height="260"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+            width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-          <!-- Button -->
-          <div style="padding: 0.9rem 1rem;">
-            <a
-              href="https://www.google.com/maps/place/MANYAM+AKADEMIK/@28.4234911,76.934441,603m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1706968d7df7:0x49ab9df0106969e1!8m2!3d28.4234864!4d76.9370159!16s/g/11yrzd18cs?entry=ttu"
-              target="_blank"
-              class="btn btn-outline"
-              style="width: 100%; text-align:center; border-radius: 12px;">
-              📍 Open in Google Maps
-            </a>
+          <div style="padding:0.9rem 1rem;">
+            <a href="https://www.google.com/maps/place/MANYAM+AKADEMIK/@28.4234911,76.934441,603m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1706968d7df7:0x49ab9df0106969e1!8m2!3d28.4234864!4d76.9370159!16s/g/11yrzd18cs?entry=ttu" target="_blank" class="btn btn-outline" style="width:100%;text-align:center;border-radius:12px;">📍 Open in Google Maps</a>
           </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    © <span class="highlight">Manyam Akademik</span> · Sector 89, Gurugram · Class 11–12 Commerce & CA Foundation
+    © <span class="highlight">Manyam Akademik</span> · Market 89, Sector 89, Gurugram · Class 11–12 Commerce & CA Foundation
   </footer>
 
-  <!-- WHATSAPP SCRIPT -->
   <script>
-    function sendWhatsApp() {
+    function sendWhatsApp(){
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const studentClass = document.getElementById('class').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      const text = `
-New enquiry for Manyam Akademik
-
+      const text = `New enquiry for Manyam Akademik
 Name: ${name}
 Phone: ${phone}
 Class: ${studentClass}
-Message: ${message}
-      `;
+Message: ${message}`;
 
-      const whatsappNumber = '917878029933'; // 91 + 7878029933
+      const whatsappNumber = '917878029933';
       const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
-
-      window.open(url, '_blank');
+      window.open(url,'_blank');
     }
   </script>
 </body>
